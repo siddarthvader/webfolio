@@ -2,7 +2,7 @@
   import Parallax from "./Parallax.svelte";
 
   import Fa from "svelte-fa";
-  import { faFlag, faMessage } from "@fortawesome/free-solid-svg-icons";
+  import { faMessage } from "@fortawesome/free-solid-svg-icons";
   import {
     faNpm,
     faGithub,
@@ -12,7 +12,7 @@
 </script>
 
 <div
-  class="w-100 h-screen relative  p-16 text-center text-3xl text-white 
+  class="w-100 h-[calc(100vh-40px)] relative  p-16 text-center text-3xl text-white 
   flex flex-col justify-center align-center z-10"
 >
   <div class="p-4 font-light text-4xl">Siddharth's Portfolio</div>
