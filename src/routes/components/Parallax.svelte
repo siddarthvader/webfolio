@@ -1,5 +1,5 @@
 <div
-  class="parallax"
+  class="parallax bg-gradient-to-r to-red-500 from-brightRed"
   data-relative-input="true"
   style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;"
 >
@@ -186,6 +186,7 @@
     top: 0;
     height: 100%;
     width: 100%;
+    z-index: 1;
     .layer {
       position: absolute;
     }

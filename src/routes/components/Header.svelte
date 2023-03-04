@@ -18,13 +18,6 @@
     <a href="#" class="hover:text-brightRed text-zinc-900">Stories</a>
   </div>
   <!-- Button -->
-  <button
-    class="flex items-center text-white bg-brightRed  baseline hover:bg-zinc-900 hover:text-white p-2 m-2 "
-  >
-    <span>Contact Me</span>
-
-    <Icon data={pencil} class="ml-2" />
-  </button>
 
   <!-- Hamburger Icon -->
   <div class="md:hidden">
