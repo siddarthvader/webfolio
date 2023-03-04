@@ -4,11 +4,11 @@
 </script>
 
 <!-- Flex container -->
-<div class="flex items-center justify-between  border-b-2  px-6 pt-2">
+<div class="flex items-center justify-between  border-b-2  px-6 ">
   <!-- Logo -->
-  <div class="px-2 py-2 ">
+  <!-- <div class="px-2 py-2 ">
     <div class="text-2xl text-brightRed font-light">Siddharth's Page</div>
-  </div>
+  </div> -->
   <!-- Menu Items -->
   <div class="hidden space-x-6 md:flex flex-1 justify-end px-4 py-2">
     <a href="#" class="hover:text-brightRed text-zinc-900">About</a>
@@ -19,7 +19,7 @@
   </div>
   <!-- Button -->
   <button
-    class="flex items-center text-white bg-brightRed  baseline hover:bg-zinc-900 hover:text-white p-2 "
+    class="flex items-center text-white bg-brightRed  baseline hover:bg-zinc-900 hover:text-white p-2 m-2 "
   >
     <span>Contact Me</span>
 
