@@ -1,18 +1,13 @@
 <script>
   import Parallax from "./Parallax.svelte";
-  import Icon from "svelte-awesome";
-  import { arrowDown, github, stackOverflow } from "svelte-awesome/icons";
 
   import Fa from "svelte-fa";
-  import {
-    faFlag,
-    faMessage,
-    faContactCard,
-  } from "@fortawesome/free-solid-svg-icons";
+  import { faFlag, faMessage } from "@fortawesome/free-solid-svg-icons";
   import {
     faNpm,
     faGithub,
     faStackOverflow,
+    faSoundcloud,
   } from "@fortawesome/free-brands-svg-icons";
 </script>
 
@@ -35,6 +30,25 @@
     </div>
     <div class="px-4 cursor-pointer">
       <Fa icon={faStackOverflow} />
+    </div>
+    <div class="px-4 cursor-pointer">
+      <Fa icon={faSoundcloud} />
+    </div>
+    <div class="px-4 cursor-pointer flex items-center">
+      <svg
+        width="20px"
+        xmlns="http://www.w3.org/2000/svg"
+        shape-rendering="geometricPrecision"
+        text-rendering="geometricPrecision"
+        image-rendering="optimizeQuality"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        viewBox="0 0 448 511.471"
+        ><path
+          fill="white"
+          d="M0 0h448v62.804H0V0zm0 229.083h448v282.388L223.954 385.808 0 511.471V229.083zm0-114.542h448v62.804H0v-62.804z"
+        /></svg
+      >
     </div>
   </div>
   <div class="justify-center flex pt-4">

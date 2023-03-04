@@ -896,11 +896,6 @@
   "resolved" "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   "version" "1.0.0"
 
-"svelte-awesome@^3.0.1":
-  "integrity" "sha512-wFMOREy4hRsUbWUhOCnilg7i2F50uKSu2dOnuXj+9TZh0wuBDo+5XIB5TCSzDbLfV8DVtSKb0Jv37yNYSxvGbQ=="
-  "resolved" "https://registry.npmjs.org/svelte-awesome/-/svelte-awesome-3.0.1.tgz"
-  "version" "3.0.1"
-
 "svelte-check@^3.0.1":
   "integrity" "sha512-feIyBAA5cSIxq4vq6mwGvGQTHy/wBVQbs5b+/VvE21WN8X7nonAuSqwvZv0UDBowzRka3Rh4gmLPH8rPePz3/w=="
   "resolved" "https://registry.npmjs.org/svelte-check/-/svelte-check-3.0.4.tgz"
@@ -949,7 +944,7 @@
     "sorcery" "^0.11.0"
     "strip-indent" "^3.0.0"
 
-"svelte@^3.23.0", "svelte@^3.43.1", "svelte@^3.54.0", "svelte@^3.55.0", "svelte@>=3.19.0":
+"svelte@^3.23.0", "svelte@^3.54.0", "svelte@^3.55.0", "svelte@>=3.19.0":
   "integrity" "sha512-S+87/P0Ve67HxKkEV23iCdAh/SX1xiSfjF1HOglno/YTbSTW7RniICMCofWGdJJbdjw3S+0PfFb1JtGfTXE0oQ=="
   "resolved" "https://registry.npmjs.org/svelte/-/svelte-3.55.1.tgz"
   "version" "3.55.1"

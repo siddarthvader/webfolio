@@ -1,6 +1,10 @@
 <script>
-  import Icon from "svelte-awesome";
-  import { bars, play, pencil } from "svelte-awesome/icons";
+  import Fa from "svelte-fa";
+  import {
+    faFlag,
+    faMessage,
+    faHamburger,
+  } from "@fortawesome/free-solid-svg-icons";
 </script>
 
 <!-- Flex container -->
@@ -21,7 +25,7 @@
 
   <!-- Hamburger Icon -->
   <div class="md:hidden">
-    <Icon data={bars} />
+    <Fa icon={faHamburger} />
   </div>
 
   <!-- Mobile Menu -->
