@@ -11,11 +11,13 @@
   </div> -->
   <!-- Menu Items -->
   <div class="hidden space-x-6 md:flex flex-1 justify-end px-4 py-2">
-    <a href="#" class="hover:text-brightRed text-zinc-900">About</a>
-    <a href="#" class="hover:text-brightRed text-zinc-900">Work</a>
-    <a href="#" class="hover:text-brightRed text-zinc-900">Open Source</a>
-    <a href="#" class="hover:text-brightRed text-zinc-900">Music</a>
-    <a href="#" class="hover:text-brightRed text-zinc-900">Stories</a>
+    <div class=" cursor-pointer hover:text-brightRed text-zinc-900">About</div>
+    <div class="cursor-pointer hover:text-brightRed text-zinc-900">Work</div>
+    <div class="cursor-pointer hover:text-brightRed text-zinc-900">
+      Open Source
+    </div>
+    <div class="cursor-pointer hover:text-brightRed text-zinc-900">Music</div>
+    <div class="cursor-pointer hover:text-brightRed text-zinc-900">Stories</div>
   </div>
   <!-- Button -->
 
@@ -30,11 +32,17 @@
       id="menu"
       class=" absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
     >
-      <a href="#" class="hover:text-brightRed text-zinc-900">About</a>
-      <a href="#" class="hover:text-brightRed text-zinc-900">Work</a>
-      <a href="#" class="hover:text-brightRed text-zinc-900">Open Source</a>
-      <a href="#" class="hover:text-brightRed text-zinc-900">Music</a>
-      <a href="#" class="hover:text-brightRed text-zinc-900">Stories</a>
+      <div class=" cursor-pointer hover:text-brightRed text-zinc-900">
+        About
+      </div>
+      <div class="cursor-pointer hover:text-brightRed text-zinc-900">Work</div>
+      <div class="cursor-pointer hover:text-brightRed text-zinc-900">
+        Open Source
+      </div>
+      <div class="cursor-pointer hover:text-brightRed text-zinc-900">Music</div>
+      <div class="cursor-pointer hover:text-brightRed text-zinc-900">
+        Stories
+      </div>
     </div>
   </div>
 </div>
