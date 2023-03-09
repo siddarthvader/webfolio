@@ -1,6 +1,15 @@
 <script>
   import Fa from "svelte-fa";
+  import { createEventDispatcher } from "svelte";
   import { faHamburger } from "@fortawesome/free-solid-svg-icons";
+  export let activeTab;
+
+  const dispatch = createEventDispatcher();
+
+  function changeState(activeTab) {
+    console.log("activeTab is...", activeTab);
+    dispatch("change", { activeTab });
+  }
 </script>
 
 <!-- Flex container -->
@@ -11,13 +20,30 @@
   </div> -->
   <!-- Menu Items -->
   <div class="hidden space-x-6 md:flex flex-1 justify-end px-4 py-2">
-    <div class=" cursor-pointer hover:text-brightRed text-zinc-900">About</div>
-    <div class="cursor-pointer hover:text-brightRed text-zinc-900">Work</div>
-    <div class="cursor-pointer hover:text-brightRed text-zinc-900">
+    <button
+      class=" cursor-pointer hover:text-brightRed text-zinc-900"
+      on:click={() => changeState("about")}
+    >
+      About
+    </button>
+    <button
+      class="cursor-pointer hover:text-brightRed text-zinc-900"
+      on:click={() => changeState("work")}>Work</button
+    >
+    <button
+      class="cursor-pointer hover:text-brightRed text-zinc-900"
+      on:click={() => changeState("open_source")}
+    >
       Open Source
-    </div>
-    <div class="cursor-pointer hover:text-brightRed text-zinc-900">Music</div>
-    <div class="cursor-pointer hover:text-brightRed text-zinc-900">Stories</div>
+    </button>
+    <button
+      class="cursor-pointer hover:text-brightRed text-zinc-900"
+      on:click={() => changeState("music")}>Music</button
+    >
+    <button
+      class="cursor-pointer hover:text-brightRed text-zinc-900"
+      on:click={() => changeState("stories")}>Stories</button
+    >
   </div>
   <!-- Button -->
 

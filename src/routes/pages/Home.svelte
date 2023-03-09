@@ -2,7 +2,6 @@
   import Parallax from "../components/Parallax.svelte";
 
   import Fa from "svelte-fa";
-  import { faMessage } from "@fortawesome/free-solid-svg-icons";
   import {
     faNpm,
     faGithub,
@@ -15,9 +14,9 @@
 <div class="p-2 font-semibold text-xl  z-10">I am a freelancer</div>
 <div class="flex p-4" />
 <div class="w-6/12 mx-auto flex justify-center  z-10">
-  <div class="px-4 cursor-pointer">
+  <!-- <div class="px-4 cursor-pointer">
     <Fa icon={faMessage} />
-  </div>
+  </div> -->
   <div class="px-4 cursor-pointer">
     <Fa icon={faGithub} />
   </div>
