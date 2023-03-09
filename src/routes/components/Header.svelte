@@ -2,6 +2,7 @@
   import Fa from "svelte-fa";
   import { createEventDispatcher } from "svelte";
   import { faHamburger } from "@fortawesome/free-solid-svg-icons";
+  import { PAGES } from "../data/constants";
   export let activeTab;
 
   const dispatch = createEventDispatcher();
@@ -19,14 +20,18 @@
     <div class="text-zinc-900 font-light">siddharthjn93@gmail.com</div>
   </div> -->
   <!-- Menu Items -->
+
   <div class="hidden space-x-6 md:flex flex-1 justify-end px-4 py-2">
-    <button
-      class=" cursor-pointer hover:text-brightRed text-zinc-900"
-      on:click={() => changeState("about")}
-    >
-      About
-    </button>
-    <button
+    {#each PAGES as page, i}
+      <button
+        class=" cursor-pointer hover:text-brightRed text-zinc-900"
+        on:click={() => changeState(page.name)}
+      >
+        {page.label}
+      </button>
+    {/each}
+
+    <!-- <button
       class="cursor-pointer hover:text-brightRed text-zinc-900"
       on:click={() => changeState("work")}>Work</button
     >
@@ -43,7 +48,7 @@
     <button
       class="cursor-pointer hover:text-brightRed text-zinc-900"
       on:click={() => changeState("stories")}>Stories</button
-    >
+    > -->
   </div>
   <!-- Button -->
 
