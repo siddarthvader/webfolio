@@ -16,7 +16,7 @@
 
 <div class="flex items-center justify-between  border-b-2  px-6 z-20">
   <div class="hidden space-x-6 md:flex flex-1 justify-end px-4 py-2">
-    {#each PAGES as page, i}
+    {#each PAGES as page}
       <button
         class=" cursor-pointer hover:text-brightRed text-zinc-900"
         on:click={() => changeState(page.name)}
