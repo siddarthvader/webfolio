@@ -9,12 +9,8 @@
   }
 </script>
 
-<div
-  class="w-100 h-[calc(100vh-40px)] relative text-center text-3xl text-white 
-    flex flex-col justify-center align-center"
->
+<div class="w-100 h-[calc(100vh-40px)] ">
   {#each PAGES as { name, component }, i}
-    {state.activeTab}
     {#if state.activeTab == name}
       <svelte:component this={component} />
     {/if}

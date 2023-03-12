@@ -184,7 +184,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    height: 100%;
+    height: calc(100vh - 40px);
     width: 100%;
     z-index: 1;
     .layer {
