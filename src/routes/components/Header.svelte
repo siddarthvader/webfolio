@@ -18,7 +18,7 @@
   <div class="hidden space-x-6 md:flex flex-1 justify-end px-4 py-2">
     {#each PAGES as page}
       <button
-        class=" cursor-pointer hover:text-brightRed text-zinc-900"
+        class=" cursor-pointer hover:text-brightRed text-zinc-600"
         on:click={() => changeState(page.name)}
       >
         {page.label}
