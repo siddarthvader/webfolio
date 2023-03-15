@@ -113,28 +113,74 @@ const TimeLine: iTimeLine[] = [
 
 type iInterest = {
   icon: IconDefinition;
+  name: string;
+  size: string;
 };
 const InterestList: iInterest[] = [
   {
     icon: faMusic,
+    name: "Music",
+    size: "3xl",
   },
   {
     icon: faFootball,
+    name: "Football",
+    size: "xl",
   },
   {
     icon: faBlog,
+    name: "Writing Stories",
+    size: "2xl",
   },
   {
     icon: faRunning,
+    name: "Running",
+    size: "xl",
   },
   {
     icon: faBowlFood,
+    name: "Reading",
+    size: "3xl",
   },
   {
     icon: faBook,
+    name: "Travelling",
+    size: "xl",
   },
   {
     icon: faGlobe,
+    name: "Coffee",
+    size: "3xl",
+  },
+  {
+    icon: faGlobe,
+    name: "Music Festivals",
+    size: "xl",
+  },
+  {
+    icon: faGlobe,
+    name: "Design Principles",
+    size: "2xl",
+  },
+  {
+    icon: faGlobe,
+    name: "Functional Programming",
+    size: "md",
+  },
+  {
+    icon: faGlobe,
+    name: "Arduino Programming",
+    size: "md",
+  },
+  {
+    icon: faGlobe,
+    name: "Mixing Music",
+    size: "2xl",
+  },
+  {
+    icon: faGlobe,
+    name: "Mixing Music",
+    size: "2xl",
   },
 ];
 
