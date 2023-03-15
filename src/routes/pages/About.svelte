@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Interests from "../components/Interests.svelte";
   import Timeline from "../components/Timeline.svelte";
 
   function timeSince(since: number) {
@@ -33,7 +34,7 @@
   <div class="p-4 text-4xl  z-10 page-title font-semibold">About Me</div>
   <div class="flex flex-row">
     <div class="p-6  flex flex-row w-[60%]">
-      <div class="w-[69%]">
+      <div class="w-[93%]">
         <div class="p-2 text-zinc-700">
           <div class="text-2xl font-semibold  text-brightRed">
             Hi, I am Siddharth
@@ -53,6 +54,8 @@
           class="bg-brightRed rounded-full px-4 py-1 text-white hover:bg-white hover:text-brightRed border-2 border-brightRed transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90 duration-300"
           >Download CV</button
         >
+        <hr class="my-12 h-0.5 border-t-0 bg-zinc-400" />
+        <Interests />
       </div>
       <!-- <div class="w-[31%] px-4 border-l-2 border-veryPaleRed">
         {#each domains as domain}

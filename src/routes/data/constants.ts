@@ -6,6 +6,16 @@ import {
   faStackOverflow,
   type IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
+
+import {
+  faBlog,
+  faBook,
+  faBowlFood,
+  faFootball,
+  faGlobe,
+  faMusic,
+  faRunning,
+} from "@fortawesome/free-solid-svg-icons";
 import About from "../pages/About.svelte";
 import Home from "../pages/Home.svelte";
 import Music from "../pages/Music.svelte";
@@ -62,4 +72,70 @@ const SubMenuList: iSubMenu[] = [
   },
 ];
 
-export { PAGES, SubMenuList };
+type iTimeLine = {
+  title: string;
+  time: string;
+  description: string;
+};
+
+const TimeLine: iTimeLine[] = [
+  {
+    title: "Freelancer",
+    time: "March 2017 - Now",
+    description:
+      "I have written fair amount of SaaS, Single Page applications using various frameworks, concurretnly maintaing the quality of code and keeping it clean, as much as the situation allowed.",
+  },
+  {
+    title: "Lead Developer",
+    time: "Jan 2016 - March 2017",
+    description:
+      "I worked on a Learning Management System, where I wrote admin panel for a system helping University teachers/students.",
+  },
+  {
+    title: "Junior Developer",
+    time: "Jan 2014 - Dec 2016",
+    description:
+      "I was a junior developer for a FinTech, I was mostly writing Jquery day-in day out, It was fun while it lasted.",
+  },
+  {
+    title: "College Guy",
+    time: "July 2010- July 2014",
+    description:
+      "I started writing code in College and I listened to a lot of Rock music and I managed crowd and teams.",
+  },
+  {
+    title: "Random Person ",
+    time: "Jan 1993- July 2010",
+    description:
+      "I was a very random person, interested in a lot of things and ended up joining Engineering college.",
+  },
+];
+
+type iInterest = {
+  icon: IconDefinition;
+};
+const InterestList: iInterest[] = [
+  {
+    icon: faMusic,
+  },
+  {
+    icon: faFootball,
+  },
+  {
+    icon: faBlog,
+  },
+  {
+    icon: faRunning,
+  },
+  {
+    icon: faBowlFood,
+  },
+  {
+    icon: faBook,
+  },
+  {
+    icon: faGlobe,
+  },
+];
+
+export { PAGES, SubMenuList, TimeLine, InterestList };
