@@ -1,5 +1,5 @@
 <script>
-  import Parallax from "../components/Parallax.svelte";
+  import Parallax, { parallaxFn } from "../components/Parallax.svelte";
 
   import Fa from "svelte-fa";
   import { SubMenuList } from "../data/constants";
@@ -8,6 +8,7 @@
 <div
   class="text-white z-10 relative text-center text-3xl 
 flex flex-col justify-center align-center h-full w-full"
+  on:mousemove={parallaxFn}
 >
   <div class="p-4 font-light text-4xl  ">Siddharth's Portfolio</div>
   <div class="p-2 font-semibold text-xl  ">I am a freelancer</div>

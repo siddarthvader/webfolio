@@ -1,4 +1,17 @@
+<script lang="ts" context="module">
+  // Add event listener
+
+  export function parallaxFn(event) {
+    console.log("happening something");
+    const position = shift.getAttribute("value");
+    const x = (window.innerWidth - event.pageX * position) / 90;
+    const y = (window.innerHeight - event.pageY * position) / 90;
+    console.log(x);
+  }
+</script>
+
 <div
+  id="parallax"
   class="parallax bg-gradient-to-r to-red-500 from-brightRed"
   data-relative-input="true"
   style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;"
