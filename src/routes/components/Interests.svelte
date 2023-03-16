@@ -1,5 +1,4 @@
 <script>
-  import Fa from "svelte-fa";
   import { InterestList } from "../data/constants";
   // function mouseOverFn(e) {
   //   const x = e.pageX - e.currentTarget.offsetLeft;
@@ -16,7 +15,7 @@
     {#each InterestList as interest}
       <li>
         <div
-          class={` text-brightRed text-${interest.size} hover-up hover:text-white cursor-arrow`}
+          class={` text-brightRed text-${interest.size} hover-up hover:text-white cursor-arrow `}
         >
           {interest.name}
         </div>
@@ -26,7 +25,7 @@
   </ul>
 </div>
 
-<style lang="scss">
+<style lang="scss" global>
   .hover-up {
     background: linear-gradient(
       white,
@@ -34,9 +33,10 @@
       hsl(12, 88%, 59%) 50%,
       hsl(12, 88%, 69%)
     );
+
     background-size: 100% 200%;
-    /*trasition effect for background*/
     transition: background 300ms;
+
     &:hover {
       background-position: 100% 100%;
     }

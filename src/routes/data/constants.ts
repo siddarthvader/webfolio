@@ -11,6 +11,7 @@ import {
   faBlog,
   faBook,
   faBowlFood,
+  faChartLine,
   faFootball,
   faGlobe,
   faMusic,
@@ -209,14 +210,19 @@ const WorkCategory: string[] = [
 ];
 
 type iWorkItem = {
+  category: string[];
   title: string;
   description: string;
+  icon: IconDefinition;
   techList: string[];
   completeTagList: string[];
+  link: Record<string, string>[];
 };
 const WorkList: iWorkItem[] = [
   {
+    category: ["All", "front-end", "backend"],
     title: "Trading Application",
+    icon: faChartLine,
     description: ` Developed a trading application which fetched historical data from Yahoo
     finance API for various Tickers/ Currencies/ Futures and did a lot of
     calculation and presented analysis.`,
@@ -230,6 +236,16 @@ const WorkList: iWorkItem[] = [
       "CSS",
       "Javascript",
       "Nodejs",
+    ],
+    link: [
+      {
+        text: "Frontend",
+        link: "https://github.com/siddarthvader/nevApp",
+      },
+      {
+        text: "Backend ",
+        link: "https://github.com/siddarthvader/nevDB",
+      },
     ],
   },
 ];
