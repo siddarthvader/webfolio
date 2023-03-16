@@ -13,6 +13,7 @@ import {
   faBowlFood,
   faChartLine,
   faFootball,
+  faGamepad,
   faGlobe,
   faMusic,
   faRunning,
@@ -220,7 +221,7 @@ type iWorkItem = {
 };
 const WorkList: iWorkItem[] = [
   {
-    category: ["All", "front-end", "backend"],
+    category: ["All", "Front-end", "Back-end"],
     title: "Trading Application",
     icon: faChartLine,
     description: ` Developed a trading application which fetched historical data from Yahoo
@@ -245,6 +246,20 @@ const WorkList: iWorkItem[] = [
       {
         text: "Backend ",
         link: "https://github.com/siddarthvader/nevDB",
+      },
+    ],
+  },
+  {
+    category: ["All", "Front-end", "Game"],
+    title: "Ball Game",
+    icon: faGamepad,
+    description: ` Developed a ball game in javascript using canvas. Where you can control a moveable bar at the bottom of a box using keyboards and deflects a single ball, stopping it from falling down. You can a score and high score for subsequet runs.`,
+    techList: ["Canvas", "Javascript", "Jquery"],
+    completeTagList: ["Canvas", "Javascript", "Jquery", "HTML", "CSS"],
+    link: [
+      {
+        text: "Game",
+        link: "https://github.com/siddarthvader/nevApp",
       },
     ],
   },

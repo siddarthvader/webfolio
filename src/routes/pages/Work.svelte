@@ -27,7 +27,7 @@
   <div class="flex flex-row flex-wrap p-4">
     {#each WorkList as work}
       <div
-        class=" bg-white rounded-lg hover:shadow-xl text-zinc-600 w-[320px] h-[320px]  cursor-pointer relative group hover-up"
+        class=" bg-white rounded-lg hover:shadow-xl text-zinc-600 w-[320px] h-[320px]  cursor-pointer relative group hover-up m-4"
       >
         <div
           class="flex flex-col justify-between group-hover:hidden h-full w-full"
