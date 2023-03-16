@@ -35,7 +35,7 @@ const PAGES: iPage[] = [
   { name: "about", label: "About", component: About },
   { name: "work", label: "Work", component: Work },
   { name: "stories", label: "Stories", component: Stories },
-  { name: "open_source", label: "Open Source", component: Opensource },
+  // { name: "open_source", label: "Open Source", component: Opensource },
   { name: "music", label: "Music", component: Music },
 ];
 
@@ -179,9 +179,59 @@ const InterestList: iInterest[] = [
   },
   {
     icon: faGlobe,
-    name: "Mixing Music",
-    size: "2xl",
+    name: "CSS",
+    size: "4xl",
+  },
+  {
+    icon: faGlobe,
+    name: "HTML",
+    size: "3xl",
+  },
+  {
+    icon: faGlobe,
+    name: "Javascript",
+    size: "3xl",
+  },
+  {
+    icon: faGlobe,
+    name: "GIS",
+    size: "xl",
   },
 ];
 
-export { PAGES, SubMenuList, TimeLine, InterestList };
+const WorkCategory: string[] = [
+  "All",
+  "Front-end",
+  "Back-end",
+  "GIS",
+  "Game",
+  "Open Source",
+];
+
+type iWorkItem = {
+  title: string;
+  description: string;
+  techList: string[];
+  completeTagList: string[];
+};
+const WorkList: iWorkItem[] = [
+  {
+    title: "Trading Application",
+    description: ` Developed a trading application which fetched historical data from Yahoo
+    finance API for various Tickers/ Currencies/ Futures and did a lot of
+    calculation and presented analysis.`,
+    techList: ["AngularJS", "MongoDB", "Sass", "Express.js", "Heroku"],
+    completeTagList: [
+      "AngularJS",
+      "MongoDB",
+      "Sass",
+      "express",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Nodejs",
+    ],
+  },
+];
+
+export { PAGES, SubMenuList, TimeLine, InterestList, WorkCategory, WorkList };
