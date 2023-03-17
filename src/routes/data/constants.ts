@@ -1,7 +1,11 @@
 import {
+  faAngular,
+  faCss3Alt,
   faGithub,
   faMicroblog,
   faNpm,
+  faPhp,
+  faReact,
   faSoundcloud,
   faStackOverflow,
   type IconDefinition,
@@ -78,6 +82,7 @@ type iTimeLine = {
   title: string;
   time: string;
   description: string;
+  link?: { text: string; link: string }[];
 };
 
 const TimeLine: iTimeLine[] = [
@@ -86,24 +91,61 @@ const TimeLine: iTimeLine[] = [
     time: "March 2017 - Now",
     description:
       "I have written fair amount of SaaS, Single Page applications using various frameworks, concurretnly maintaing the quality of code and keeping it clean, as much as the situation allowed.",
+
+    link: [
+      {
+        text: "Top Rated Upwork Freelancer",
+        link: "https://www.upwork.com/freelancers/~016fec88e43102b929",
+      },
+    ],
+  },
+  {
+    title: "Front-end Lead",
+    time: "March 2018 - July 2019",
+    description: `I was part of a startup(quikmile) where we create a system to minimize the inefficiencies in the transportation and logistics sector in the country. With the help of cutting-edge technology our team of tech experts intent to help fleet owners bridge the gaps and get the best ROI from their fleet and in turn grow their business.`,
+    link: [
+      {
+        text: "Company Profile",
+        link: "https://www.crunchbase.com/organization/quikmile",
+      },
+      {
+        text: "Acqusition by Airtel",
+        link: "https://yourstory.com/2019/11/bharti-airtel-acquihires-vehicle-tracking-logistics-startup-quikmile",
+      },
+    ],
   },
   {
     title: "Lead Developer",
     time: "Jan 2016 - March 2017",
     description:
-      "I worked on a Learning Management System, where I wrote admin panel for a system helping University teachers/students.",
+      "I worked on a Learning Management System in a startup named Acadaly, where I wrote admin panel for a system helping University teachers/students.",
+    link: [
+      {
+        text: "Company Profile",
+        link: "https://www.acadly.com/",
+      },
+    ],
   },
   {
     title: "Junior Developer",
     time: "Jan 2014 - Dec 2016",
     description:
-      "I was a junior developer for a FinTech, I was mostly writing Jquery day-in day out, It was fun while it lasted.",
+      "I was a junior developer for a FinTech company called Nucleus Software, I was mostly writing jquery day-in day out, It was fun while it lasted.",
+    link: [
+      { text: "Compant Profile", link: "https://www.nucleussoftware.com/" },
+    ],
   },
   {
     title: "College Guy",
     time: "July 2010- July 2014",
     description:
-      "I started writing code in College and I listened to a lot of Rock music and I managed crowd and teams.",
+      "I went to  MNIT Jaipur for undergraduate and I started writing code in College and I listened to a lot of Rock music and I managed crowd and teams.",
+    link: [
+      {
+        text: "College",
+        link: "https://mnit.ac.in/",
+      },
+    ],
   },
   {
     title: "Random Person ",
@@ -207,7 +249,15 @@ const InterestList: iInterest[] = [
   },
 ];
 
-const WorkCategory: string[] = [
+type WorkCategoryOption =
+  | "All"
+  | "Front-end"
+  | "Back-end"
+  | "GIS"
+  | "Game"
+  | "Open Source";
+
+const WorkCategory: WorkCategoryOption[] = [
   "All",
   "Front-end",
   "Back-end",
@@ -216,13 +266,37 @@ const WorkCategory: string[] = [
   "Open Source",
 ];
 
+type TechItem =
+  | "HTML"
+  | "CSS"
+  | "Javascript"
+  | "React"
+  | "Mithril"
+  | "AngularJS"
+  | "Nodejs"
+  | "Express"
+  | "Sass"
+  | "MongoDB"
+  | "Postgres"
+  | "Mapbox"
+  | "GIS"
+  | "Leaflet"
+  | "OpenMapTiles"
+  | "OpenStreetMap"
+  | "d3.js"
+  | "Heroku"
+  | "Canvas"
+  | "Jquery"
+  | "PHP"
+  | "Express.js";
+
 type iWorkItem = {
-  category: string[];
+  category: WorkCategoryOption[];
   title: string;
   description: string;
   icon: IconDefinition;
-  techList: string[];
-  completeTagList: string[];
+  techList: TechItem[];
+  completeTagList: TechItem[];
   link: Record<string, string>[];
 };
 const WorkList: iWorkItem[] = [
@@ -264,8 +338,86 @@ const WorkList: iWorkItem[] = [
     completeTagList: ["Canvas", "Javascript", "Jquery", "HTML", "CSS"],
     link: [
       {
-        text: "Game",
+        text: "play",
         link: "https://github.com/siddarthvader/nevApp",
+      },
+    ],
+  },
+  {
+    category: ["All", "Open Source", "Front-end"],
+    title: "Angular-httpshooter",
+    icon: faAngular,
+    description: ` A factory written in angular 1.0+ which makes/shoots all http calls collectively asynchronously.Angular-httpshooter makes all your api calls asynchronous, idea behind it to make the connection between server and client single threaded, it means shooting only one call at a point of time and wait for the response from server to launch the next call.`,
+    techList: ["AngularJS", "Javascript"],
+    completeTagList: ["AngularJS", "Javascript"],
+    link: [
+      {
+        text: "npm",
+        link: "https://www.npmjs.com/package/angular-httpshooter",
+      },
+      {
+        text: "github",
+        link: "https://www.npmjs.com/package/angular-httpshooter",
+      },
+    ],
+  },
+  {
+    category: ["All", "Open Source", "Front-end"],
+    title: "CSS MEDIA ALL",
+    icon: faCss3Alt,
+    description: ` A library written in css consisted of media queries to support the responsiveness of webpage. CMA(Css Media All) makes your webpage responsive, idea behind this library is to make webpage more responsive to differrent screens.`,
+    techList: ["CSS", "Sass"],
+    completeTagList: ["CSS", "Sass"],
+    link: [
+      {
+        text: "npm",
+        link: "https://www.npmjs.com/package/css-media-all",
+      },
+      {
+        text: "github",
+        link: "https://github.com/siddarthvader/CSS-MEDIA-ALL",
+      },
+    ],
+  },
+  {
+    category: ["All", "Front-end", "Back-end"],
+    title: "Fee Management System",
+    icon: faPhp,
+    description: ` A fees management system for schools and college, written in PHP. You can create Class, Batch, Students, Teacher profile and manage the fee management for whole school, transfer of students to other class and other things.`,
+    techList: ["PHP", "CSS", "HTML", "Javascript"],
+    completeTagList: ["PHP", "CSS", "HTML", "Javascript"],
+    link: [
+      {
+        text: "github",
+        link: "https://github.com/siddarthvader/sms/tree/master",
+      },
+    ],
+  },
+  {
+    category: ["All", "Front-end", "Back-end"],
+    title: "Employees Management Portal",
+    icon: faReact,
+    description: ` A ERP software written for a clothing factory where they had lot of new labours everyday, system helped them mark attendence of labour force and prepared a ledger.`,
+    techList: ["React", "Javascript", "Postgres", "Express"],
+    completeTagList: ["Javascript", "CSS", "HTML", "React"],
+    link: [
+      {
+        text: "contact",
+        link: "https://github.com/siddarthvader/sms/tree/master",
+      },
+    ],
+  },
+  {
+    category: ["All", "Front-end", "Back-end"],
+    title: "Employees Management Portal",
+    icon: faReact,
+    description: ` A ERP software written for a clothing factory where they had lot of new labours everyday, system helped them mark attendence of labour force and prepared a ledger.`,
+    techList: ["React", "Javascript", "Postgres", "Express"],
+    completeTagList: ["Javascript", "CSS", "HTML", "React"],
+    link: [
+      {
+        text: "contact",
+        link: "https://github.com/siddarthvader/sms/tree/master",
       },
     ],
   },

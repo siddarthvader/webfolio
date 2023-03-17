@@ -57,17 +57,8 @@
         <hr class="my-12 h-0.5 border-t-0 bg-zinc-400" />
         <Interests />
       </div>
-      <!-- <div class="w-[31%] px-4 border-l-2 border-veryPaleRed">
-        {#each domains as domain}
-          <h1 class="py-1 font-semibold text-zinc-500">{domain.name}</h1>
-          <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
-            <div class="w-full h-full bg-gray-200 absolute" />
-            <div class="h-full bg-brightRed absolute" style="width:10%" />
-          </div>
-        {/each}
-      </div> -->
     </div>
-    <div class="p-4 w-[40%] overflow-y-scroll max-h-[100%]">
+    <div class="p-4 w-[40%] overflow-y-scroll max-h-[100%] h-[600px]">
       <Timeline />
     </div>
   </div>

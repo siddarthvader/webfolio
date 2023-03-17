@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { faLink } from "@fortawesome/free-solid-svg-icons";
+  import Fa from "svelte-fa";
   import { TimeLine } from "../data/constants";
 </script>
 
@@ -17,6 +19,21 @@
         <p class="mt-3">
           {item.description}
         </p>
+        <div class="flex flex-row">
+          {#if item?.link?.length > 0}
+            {#each item.link as link}
+              <a
+                href={link?.link}
+                target="_blank"
+                rel="noreferrer"
+                class="flex flex-row items-center px-1 mt-1 bg-white  rounded-sm  text-brightRed  text-xs border-white border mr-2 "
+              >
+                <span class="mr-1"> {link && link.text}</span>
+                <Fa icon={faLink} size="sm" />
+              </a>
+            {/each}
+          {/if}
+        </div>
       </div>
     {/each}
   </div>

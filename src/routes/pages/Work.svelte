@@ -1,9 +1,5 @@
 <script lang="ts">
-  import {
-    faChartLine,
-    faExternalLink,
-    faLink,
-  } from "@fortawesome/free-solid-svg-icons";
+  import { faLink } from "@fortawesome/free-solid-svg-icons";
   import Fa from "svelte-fa";
   import { WorkCategory, WorkList } from "../data/constants";
   let selectedCategory: string = "All";
@@ -24,7 +20,7 @@
       </div>
     {/each}
   </div>
-  <div class="flex flex-row flex-wrap p-4">
+  <div class="flex flex-row flex-wrap p-4 h-[600px] overflow-y-scroll">
     {#each WorkList as work}
       <div
         class=" bg-white rounded-lg hover:shadow-xl text-zinc-600 w-[320px] h-[320px]  cursor-pointer relative group hover-up m-4 work-box overflow-hidden"
