@@ -12,6 +12,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
+  faBaseball,
   faBlog,
   faBook,
   faBowlFood,
@@ -21,6 +22,8 @@ import {
   faGlobe,
   faMusic,
   faRunning,
+  faTruck,
+  faUniversity,
 } from "@fortawesome/free-solid-svg-icons";
 import About from "../pages/About.svelte";
 import Home from "../pages/Home.svelte";
@@ -78,11 +81,13 @@ const SubMenuList: iSubMenu[] = [
   },
 ];
 
+export type TimeLinkLink = { text: string; link: string };
+
 type iTimeLine = {
   title: string;
   time: string;
   description: string;
-  link?: { text: string; link: string }[];
+  link?: TimeLinkLink[];
 };
 
 const TimeLine: iTimeLine[] = [
@@ -288,7 +293,13 @@ type TechItem =
   | "Canvas"
   | "Jquery"
   | "PHP"
-  | "Express.js";
+  | "Express.js"
+  | "Quasar"
+  | "Flutter"
+  | "MySQL"
+  | "Tachyons"
+  | "AWS"
+  | "GCP";
 
 type iWorkItem = {
   category: WorkCategoryOption[];
@@ -312,7 +323,7 @@ const WorkList: iWorkItem[] = [
       "AngularJS",
       "MongoDB",
       "Sass",
-      "express",
+      "Express.js",
       "HTML",
       "CSS",
       "Javascript",
@@ -403,21 +414,49 @@ const WorkList: iWorkItem[] = [
     link: [
       {
         text: "contact",
+        link: "",
+      },
+    ],
+  },
+  {
+    category: ["All", "Front-end"],
+    title: "Fleet Management Service",
+    icon: faTruck,
+    description: ` A Fleet management service written primarily in golang supported by quasar & flutter as front-end framework. I was responsible for managing where we tracked the trucks and presented analysis.`,
+    techList: ["Javascript", "Quasar", "Flutter"],
+    completeTagList: ["Javascript", "Quasar", "Flutter"],
+    link: [
+      {
+        text: "contact",
         link: "https://github.com/siddarthvader/sms/tree/master",
       },
     ],
   },
   {
     category: ["All", "Front-end", "Back-end"],
-    title: "Employees Management Portal",
-    icon: faReact,
-    description: ` A ERP software written for a clothing factory where they had lot of new labours everyday, system helped them mark attendence of labour force and prepared a ledger.`,
-    techList: ["React", "Javascript", "Postgres", "Express"],
-    completeTagList: ["Javascript", "CSS", "HTML", "React"],
+    title: "University Management System",
+    icon: faUniversity,
+    description: ` A university management system written in mithril.js for a skill development university. It enabled user to add courses/ add students to course/comments/ render blog and many such functions.`,
+    techList: ["Mithril", "MySQL", "Tachyons", "AWS"],
+    completeTagList: ["Mithril", "MySQL", "Tachyons", "AWS", "GCP"],
     link: [
       {
         text: "contact",
-        link: "https://github.com/siddarthvader/sms/tree/master",
+        link: "",
+      },
+    ],
+  },
+  {
+    category: ["All", "Front-end"],
+    title: "College Fest Website",
+    icon: faBaseball,
+    description: ` A marketing/portfolio website for sports tournament of my college. My First project ever.`,
+    techList: ["PHP", "HTML", "CSS"],
+    completeTagList: ["PHP", "HTML", "CSS"],
+    link: [
+      {
+        text: "github",
+        link: "https://github.com/siddarthvader/mst/tree/master",
       },
     ],
   },
