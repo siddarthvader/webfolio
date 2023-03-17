@@ -461,5 +461,9 @@ const WorkList: iWorkItem[] = [
     ],
   },
 ];
+type DayStatusOption = "day" | "night";
 
+export type DayStatus = {
+  status: DayStatusOption;
+};
 export { PAGES, SubMenuList, TimeLine, InterestList, WorkCategory, WorkList };
