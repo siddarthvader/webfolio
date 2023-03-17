@@ -27,7 +27,7 @@
   <div class="flex flex-row flex-wrap p-4">
     {#each WorkList as work}
       <div
-        class=" bg-white rounded-lg hover:shadow-xl text-zinc-600 w-[320px] h-[320px]  cursor-pointer relative group hover-up m-4"
+        class=" bg-white rounded-lg hover:shadow-xl text-zinc-600 w-[320px] h-[320px]  cursor-pointer relative group hover-up m-4 work-box overflow-hidden"
       >
         <div
           class="flex flex-col justify-between group-hover:hidden h-full w-full"
@@ -44,17 +44,19 @@
             {/each}
           </div>
         </div>
-        <div
-          class="text-white group-hover:flex absolute top-0 left-0 w-full h-full hidden flex-col justify-between"
-        >
-          <div class="flex flex-row justify-between items-center px-4">
+        <div class="text-white flex  w-full h-full flex-col justify-between">
+          <div
+            class="flex flex-row justify-between items-center px-4 cat-hover absolute top-0"
+          >
             <div
               class="rounded-bl-md rounded-br-md bg-white px-2 text-zinc-500 text-sm font-semibold"
             >
               {work.category.join(", ")}
             </div>
           </div>
-          <div class="p-2 px-4 text-justify">
+          <div
+            class="p-2 px-4 text-justify flex-1 pt-8 group-hover:opacity-100 opacity-0 transition duration-500"
+          >
             {work.description}
           </div>
 
@@ -76,3 +78,17 @@
     {/each}
   </div>
 </div>
+
+<style lang="scss">
+  .work-box:hover {
+    .cat-hover {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  .cat-hover {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+  }
+</style>

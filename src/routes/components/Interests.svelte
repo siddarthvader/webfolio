@@ -36,7 +36,7 @@
 
     background-size: 100% 200%;
     transition: background 300ms;
-
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
     &:hover {
       background-position: 100% 100%;
     }
