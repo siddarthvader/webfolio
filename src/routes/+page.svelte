@@ -3,9 +3,9 @@
   import SubMenu from "./components/SubMenu.svelte";
   import { PAGES } from "./data/constants";
 
-  let state: Record<string, string> = { activeTab: "home" };
+  let state: Record<string, string> = { activeTab: "about" };
 
-  function tabChange(ev) {
+  function tabChange(ev: CustomEvent) {
     state.activeTab = ev.detail.activeTab;
   }
 </script>

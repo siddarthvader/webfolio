@@ -2,65 +2,7 @@
   import Parallax, { parallaxFn } from "../components/Parallax.svelte";
 
   import Fa from "svelte-fa";
-  import { SubMenuList, type DayStatus } from "../data/constants";
-  import { onMount } from "svelte";
-  import SunCalc from "suncalc3";
-
-  // onMount(() => {
-  //   if (window.navigator.geolocation) {
-  //     // Geolocation available
-  //     // console.log("window.", window.navigator.geolocation);
-
-  //     let coords;
-  //     window.navigator.geolocation.getCurrentPosition((c) => {
-  //       coords = c.coords;
-
-  //       let times = SunCalc.getSunTimes(
-  //         new Date(),
-  //         coords.latitude,
-  //         coords.longitude
-  //       );
-
-  //       const { sunriseStart, sunsetEnd } = times;
-
-  //       const dayDuration: number = Math.floor(
-  //         Math.abs(sunsetEnd.value.getTime() - sunriseStart.value.getTime()) /
-  //           3600000
-  //       );
-
-  //       console.log(dayStatus());
-
-  //       function dayStatus(): DayStatus {
-  //         const currentTime: Date = new Date();
-
-  //         if (
-  //           currentTime < sunriseStart.value ||
-  //           currentTime > sunsetEnd.value
-  //         ) {
-  //           return { status: "night" };
-  //         }
-  //         return { status: "day" };
-  //       }
-  //       const sunPosition = SunCalc.getPosition(
-  //         new Date(),
-  //         coords.latitude,
-  //         coords.longitude
-  //       );
-  //       const moonPosition = SunCalc.getMoonPosition(
-  //         new Date(),
-  //         coords.latitude,
-  //         coords.longitude
-  //       );
-
-  //       console.log("sun position is.., ", sunAlt, sunAzi);
-  //       console.log("moon position is.., ", moonAlt, moonAzi);
-
-  //       console.log("times are ..", times);
-  //       console.log("sunPosition are...", sunPosition);
-  //       console.log("moonPosition is..", moonPosition);
-  //     }, console.log);
-  //   }
-  // });
+  import { SubMenuList } from "../data/constants";
 </script>
 
 <div

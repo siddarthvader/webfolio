@@ -4,7 +4,7 @@
   import { faHamburger } from "@fortawesome/free-solid-svg-icons";
   import { PAGES } from "../data/constants";
 
-  export let activeTab;
+  export let activeTab: string;
 
   const dispatch = createEventDispatcher();
 
@@ -18,7 +18,9 @@
   <div class="hidden space-x-6 md:flex flex-1 justify-end px-4 py-2">
     {#each PAGES as page}
       <button
-        class=" cursor-pointer hover:text-brightRed text-zinc-600"
+        class={`cursor-pointer hover:text-brightRed ${
+          activeTab === page.name ? "text-brightRed" : " text-zinc-600"
+        }`}
         on:click={() => changeState(page.name)}
       >
         {page.label}

@@ -28,7 +28,6 @@ import {
 import About from "../pages/About.svelte";
 import Home from "../pages/Home.svelte";
 import Music from "../pages/Music.svelte";
-import Opensource from "../pages/Opensource.svelte";
 import Stories from "../pages/Stories.svelte";
 import Work from "../pages/Work.svelte";
 
@@ -40,7 +39,7 @@ type iPage = {
   component: any;
 };
 const PAGES: iPage[] = [
-  { name: "home", label: "Home", component: Home },
+  // { name: "home", label: "Home", component: Home },
   { name: "about", label: "About", component: About },
   { name: "work", label: "Work", component: Work },
   { name: "stories", label: "Stories", component: Stories },
