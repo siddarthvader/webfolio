@@ -11,7 +11,7 @@
   }
 </script>
 
-<div class="w-full h-[calc(100vh-40px)] ">
+<div class="w-full xl:h-[calc(100vh-40px)] h-full]">
   {#each PAGES as { name, component }, i}
     {#if state.activeTab == name}
       <svelte:component this={component} />

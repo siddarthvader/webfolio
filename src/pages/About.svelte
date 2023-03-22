@@ -30,16 +30,18 @@
   ];
 </script>
 
-<div class="p-6 h-[calc(100%-48px)] w-full bg-veryPaleRed ">
-  <div class="p-4 text-4xl  z-10 page-title font-semibold">About Me</div>
-  <div class="flex flex-row">
-    <div class="p-6  flex flex-row w-[60%]">
-      <div class="w-[93%]">
+<div class="xl:p-6 p-2 h-full xl:h-[calc(100%-48px)] w-full bg-veryPaleRed">
+  <div class="p-2 xl:p-4 text-3xl xl:text-4xl z-10 page-title font-semibold">
+    About Me
+  </div>
+  <div class="flex lg:flex-row flex-col overflow-scroll h-full">
+    <div class="xl:p-6 p-2 flex lg:flex-row flex-col lg:w-[60%] w-[100%]">
+      <div class="xl:w-[93%] w-full">
         <div class="p-2 text-zinc-700">
-          <div class="text-2xl font-semibold  text-brightRed">
+          <div class="text-xl lg:text-2xl font-semibold  text-brightRed">
             Hi, I am Siddharth
           </div>
-          <div class="text-zinc-600 text-4xl font-bold py-2">
+          <div class="text-zinc-600 text-2xl lg:text-4xl font-bold py-2">
             I make things work. <span class="typewriter" />
           </div>
           <div class="pt-2">
@@ -58,7 +60,10 @@
         <Interests />
       </div>
     </div>
-    <div class="p-4 w-[40%] overflow-y-scroll max-h-[100%] h-[600px]">
+    <hr class="px-2 my-12 h-0.5 border-t-0 bg-zinc-400 block xl:hidden" />
+    <div
+      class="p-2 xl:p-4 lg:w-[40%] w-[100%] lg:overflow-y-scroll lg:max-h-[100%] lg:h-[600px]"
+    >
       <Timeline />
     </div>
   </div>

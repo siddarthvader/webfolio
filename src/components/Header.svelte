@@ -1,7 +1,7 @@
 <script lang="ts">
   import Fa from "svelte-fa";
   import { createEventDispatcher } from "svelte";
-  import { faHamburger } from "@fortawesome/free-solid-svg-icons";
+  import { faBars, faHamburger } from "@fortawesome/free-solid-svg-icons";
   import { PAGES } from "../data/constants";
 
   export let activeTab: string;
@@ -15,7 +15,7 @@
 </script>
 
 <div class="flex items-center justify-between  border-b-2  px-6 z-20">
-  <div class="hidden space-x-6 md:flex flex-1 justify-end px-4 py-2">
+  <div class="space-x-6 flex flex-1 justify-end px-4 py-2">
     {#each PAGES as page}
       <button
         class={`cursor-pointer hover:text-brightRed ${
@@ -29,10 +29,10 @@
   </div>
 
   <div class="md:hidden">
-    <Fa icon={faHamburger} />
+    <Fa icon={faBars} />
   </div>
 
-  <div class="md:hidden">
+  <div class="xl:hidden">
     <div
       id="menu"
       class=" absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
