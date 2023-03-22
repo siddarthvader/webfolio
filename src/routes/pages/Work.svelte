@@ -1,8 +1,31 @@
 <script lang="ts">
   import { faLink } from "@fortawesome/free-solid-svg-icons";
   import Fa from "svelte-fa";
-  import { WorkCategory, WorkList } from "../data/constants";
-  let selectedCategory: string = "All";
+  import {
+    WorkCategory,
+    WorkList,
+    type WorkCategoryOption,
+  } from "../data/constants";
+
+  import { flip } from "svelte/animate";
+  import { crossfade } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
+
+  const [send, receive] = crossfade({
+    fallback(node, params) {
+      const style = getComputedStyle(node);
+      const transform = style.transform === "none" ? "" : style.transform;
+      return {
+        css: (t) => `transform: ${transform} scale(${t}); opacity: ${t}`,
+      };
+    },
+  });
+
+  let selectedCategory: WorkCategoryOption = "All";
+
+  function changeCat(newCat: WorkCategoryOption) {
+    selectedCategory = newCat;
+  }
 </script>
 
 <div class="p-6 h-[calc(100%-48px)] w-full bg-veryPaleRed">
@@ -10,26 +33,30 @@
   <div />
   <div class="flex flex-row space-x-4 p-6">
     {#each WorkCategory as cat}
-      <div
+      <button
         class="font-semibold text-xl cursor-pointer hover:text-brightRed {selectedCategory ==
         cat
           ? 'text-brightRed'
           : 'text-zinc-600'}"
+        on:click={() => changeCat(cat)}
       >
         {cat}
-      </div>
+      </button>
     {/each}
   </div>
   <div class="flex flex-row flex-wrap p-4 h-[600px] overflow-y-scroll">
-    {#each WorkList as work}
+    {#each WorkList.filter( (w) => w.category.includes(selectedCategory) ) as work (work.id)}
       <div
+        in:receive={{ key: work.id }}
+        out:send|local={{ key: work.id }}
+        animate:flip={{ duration: 600, easing: quintOut }}
         class=" bg-white rounded-lg hover:shadow-xl text-zinc-600 w-[320px] h-[320px]  cursor-pointer relative group hover-up m-4 work-box overflow-hidden"
       >
         <div
           class="flex flex-col justify-between group-hover:hidden h-full w-full"
         >
           <div class="font-semibold text-2xl p-3">{work.title}</div>
-          <Fa icon={work.icon} size={"10x"} />
+          <Fa icon={work.icon} size={"5x"} />
           <div class="flex flex-row flex-wrap self-end  p-2">
             {#each work.techList as tech}
               <div

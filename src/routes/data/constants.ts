@@ -267,11 +267,10 @@ const InterestList: iInterest[] = [
   },
 ];
 
-type WorkCategoryOption =
+export type WorkCategoryOption =
   | "All"
   | "Front-end"
   | "Back-end"
-  | "GIS"
   | "Game"
   | "Open Source";
 
@@ -279,7 +278,6 @@ const WorkCategory: WorkCategoryOption[] = [
   "All",
   "Front-end",
   "Back-end",
-  "GIS",
   "Game",
   "Open Source",
 ];
@@ -315,6 +313,7 @@ type TechItem =
   | "GCP";
 
 type iWorkItem = {
+  id: string;
   category: WorkCategoryOption[];
   title: string;
   description: string;
@@ -325,6 +324,7 @@ type iWorkItem = {
 };
 const WorkList: iWorkItem[] = [
   {
+    id: "trading_app",
     category: ["All", "Front-end", "Back-end"],
     title: "Trading Application",
     icon: faChartLine,
@@ -354,6 +354,7 @@ const WorkList: iWorkItem[] = [
     ],
   },
   {
+    id: "ball_game",
     category: ["All", "Front-end", "Game"],
     title: "Ball Game",
     icon: faGamepad,
@@ -386,6 +387,7 @@ const WorkList: iWorkItem[] = [
     ],
   },
   {
+    id: "css_media_all",
     category: ["All", "Open Source", "Front-end"],
     title: "CSS MEDIA ALL",
     icon: faCss3Alt,
@@ -404,6 +406,7 @@ const WorkList: iWorkItem[] = [
     ],
   },
   {
+    id: "fee_management",
     category: ["All", "Front-end", "Back-end"],
     title: "Fee Management System",
     icon: faPhp,
@@ -418,6 +421,7 @@ const WorkList: iWorkItem[] = [
     ],
   },
   {
+    id: "empman",
     category: ["All", "Front-end", "Back-end"],
     title: "Employees Management Portal",
     icon: faReact,
@@ -432,6 +436,7 @@ const WorkList: iWorkItem[] = [
     ],
   },
   {
+    id: "fleet_man",
     category: ["All", "Front-end"],
     title: "Fleet Management Service",
     icon: faTruck,
@@ -446,6 +451,7 @@ const WorkList: iWorkItem[] = [
     ],
   },
   {
+    id: "univ_man",
     category: ["All", "Front-end", "Back-end"],
     title: "University Management System",
     icon: faUniversity,
@@ -460,6 +466,7 @@ const WorkList: iWorkItem[] = [
     ],
   },
   {
+    id: "college_fest",
     category: ["All", "Front-end"],
     title: "College Fest Website",
     icon: faBaseball,
