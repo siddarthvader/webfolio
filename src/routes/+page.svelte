@@ -1,9 +1,10 @@
 <script lang="ts">
-  import Header from "./components/Header.svelte";
-  import SubMenu from "./components/SubMenu.svelte";
-  import { PAGES } from "./data/constants";
+  import Header from "../components/Header.svelte";
+  import SubMenu from "../components/SubMenu.svelte";
+  import { PAGES } from "../data/constants";
 
   let state: Record<string, string> = { activeTab: "about" };
+  export const prerender = true;
 
   function tabChange(ev: CustomEvent) {
     state.activeTab = ev.detail.activeTab;

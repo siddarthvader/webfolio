@@ -25,6 +25,7 @@ import {
   faTruck,
   faUniversity,
 } from "@fortawesome/free-solid-svg-icons";
+
 import About from "../pages/About.svelte";
 import Home from "../pages/Home.svelte";
 import Music from "../pages/Music.svelte";
@@ -368,6 +369,7 @@ const WorkList: iWorkItem[] = [
     ],
   },
   {
+    id: "angular_httpshooter",
     category: ["All", "Open Source", "Front-end"],
     title: "Angular-httpshooter",
     icon: faAngular,
