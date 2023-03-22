@@ -1,6 +1,7 @@
 <script lang="ts">
   import Fa from "svelte-fa";
   import { SubMenuList } from "../data/constants";
+  import Contact from "./Contact.svelte";
 </script>
 
 <div
@@ -18,8 +19,5 @@
       </a>
     {/each}
   </div>
-  <button
-    class="text-sm hover:text-white rounded-full hover:bg-brightRed  baseline py-1 px-2  hover:border-white border border-brightRed bg-white text-brightRed"
-    >Contact Me
-  </button>
+  <Contact />
 </div>
