@@ -68,11 +68,11 @@
   class="text-white z-10 relative text-center text-3xl 
 flex flex-col justify-center align-center h-full w-full"
 >
-  <div class="w-full h-[50vh]  border-white border-2 bg-orange-500">
+  <!-- <div class="w-full h-[50vh]  border-white border-2 bg-orange-500">
     <div class="w-[32px] h-[32px] fill-white">
       <SunSVG />
     </div>
-  </div>
+  </div> -->
   <div class="p-4 font-light text-4xl  ">Siddharth's Portfolio</div>
   <div class="p-2 font-semibold text-xl  ">I am a freelancer</div>
   <div class="flex p-4" />

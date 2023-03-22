@@ -105,6 +105,19 @@ const TimeLine: iTimeLine[] = [
     ],
   },
   {
+    title: "Front-end Consultant",
+    time: "April 2020 - Feb 2023",
+    description:
+      "I worked on a Business Intelligence software and worked with a very smart team to bring data to visualization. We wrote a lot of Mithril and React, got to work on really interesting problems for e.g. writing sql token editors and web maps.",
+
+    link: [
+      {
+        text: "Company Profile",
+        link: "https://bipp.io/",
+      },
+    ],
+  },
+  {
     title: "Front-end Lead",
     time: "March 2018 - July 2019",
     description: `I was part of a startup(quikmile) where we create a system to minimize the inefficiencies in the transportation and logistics sector in the country. With the help of cutting-edge technology our team of tech experts intent to help fleet owners bridge the gaps and get the best ROI from their fleet and in turn grow their business.`,
