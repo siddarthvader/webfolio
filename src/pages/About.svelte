@@ -53,7 +53,8 @@
           </div>
         </div>
         <a
-          href="/src/data/CV.pdf"
+          target="_blank"
+          href="https://www.dropbox.com/s/zqfimh2q624txzw/CV.pdf?dl=0"
           download="Siddharth_Resume.pdf"
           class="bg-brightRed rounded-full px-4 py-1 text-white hover:bg-white hover:text-brightRed border-2 border-brightRed transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90 duration-300"
           >Download CV</a
