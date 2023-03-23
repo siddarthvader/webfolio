@@ -41,20 +41,22 @@
           <div class="text-xl lg:text-2xl font-semibold  text-brightRed">
             Hi, I am Siddharth
           </div>
-          <div class="text-zinc-600 text-2xl lg:text-4xl font-bold py-2">
+          <div class="text-zinc-600 text-xl lg:text-4xl font-bold py-2">
             I make things work. <span class="typewriter" />
           </div>
           <div class="pt-2">
             Software Developer/Architect from India with {timeSince(2014)}
-            years of experience writing Applications for web/mobile primarily. I
-            have been working as a full time freelancer for
-            {timeSince(2017)} years now and I got a chance to work on various technologies
-            ranging from writing bare CSS to work on complex data driven applications.
+            years of experience writing web/mobile apps primarily. I have been working
+            as a full time freelancer for
+            {timeSince(2017)} years and I worked on technologies ranging from writing
+            bare CSS to work on complex data driven applications.
           </div>
         </div>
-        <button
+        <a
+          href="/src/data/CV.pdf"
+          download="Siddharth_Resume.pdf"
           class="bg-brightRed rounded-full px-4 py-1 text-white hover:bg-white hover:text-brightRed border-2 border-brightRed transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90 duration-300"
-          >Download CV</button
+          >Download CV</a
         >
         <hr class="my-12 h-0.5 border-t-0 bg-zinc-400" />
         <Interests />

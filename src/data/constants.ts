@@ -180,9 +180,34 @@ type iInterest = {
 };
 const InterestList: iInterest[] = [
   {
+    icon: faGlobe,
+    name: "CSS",
+    size: "4xl",
+  },
+  {
+    icon: faGlobe,
+    name: "HTML",
+    size: "3xl",
+  },
+  {
+    icon: faGlobe,
+    name: "Javascript",
+    size: "3xl",
+  },
+  {
+    icon: faGlobe,
+    name: "GIS",
+    size: "xl",
+  },
+  {
     icon: faMusic,
     name: "Music",
     size: "3xl",
+  },
+  {
+    icon: faGlobe,
+    name: "Typescript",
+    size: "2xl",
   },
   {
     icon: faFootball,
@@ -244,27 +269,6 @@ const InterestList: iInterest[] = [
     name: "Mixing Music",
     size: "2xl",
   },
-
-  {
-    icon: faGlobe,
-    name: "CSS",
-    size: "4xl",
-  },
-  {
-    icon: faGlobe,
-    name: "HTML",
-    size: "3xl",
-  },
-  {
-    icon: faGlobe,
-    name: "Javascript",
-    size: "3xl",
-  },
-  {
-    icon: faGlobe,
-    name: "GIS",
-    size: "xl",
-  },
 ];
 
 export type WorkCategoryOption =
@@ -324,6 +328,59 @@ type iWorkItem = {
 };
 const WorkList: iWorkItem[] = [
   {
+    id: "angular_httpshooter",
+    category: ["All", "Open Source", "Front-end"],
+    title: "Angular-httpshooter",
+    icon: faAngular,
+    description: ` A factory written in angular 1.0+ which makes/shoots all http calls collectively asynchronously.Angular-httpshooter makes all your api calls asynchronous, idea behind it to make the connection between server and client single threaded, it means shooting only one call at a point of time and wait for the response from server to launch the next call.`,
+    techList: ["AngularJS", "Javascript"],
+    completeTagList: ["AngularJS", "Javascript"],
+    link: [
+      {
+        text: "npm",
+        link: "https://www.npmjs.com/package/angular-httpshooter",
+      },
+      {
+        text: "github",
+        link: "https://www.npmjs.com/package/angular-httpshooter",
+      },
+    ],
+  },
+  {
+    id: "css_media_all",
+    category: ["All", "Open Source", "Front-end"],
+    title: "CSS MEDIA ALL",
+    icon: faCss3Alt,
+    description: ` A library written in css consisted of media queries to support the responsiveness of webpage. CMA(Css Media All) makes your webpage responsive, idea behind this library is to make webpage more responsive to differrent screens.`,
+    techList: ["CSS", "Sass"],
+    completeTagList: ["CSS", "Sass"],
+    link: [
+      {
+        text: "npm",
+        link: "https://www.npmjs.com/package/css-media-all",
+      },
+      {
+        text: "github",
+        link: "https://github.com/siddarthvader/CSS-MEDIA-ALL",
+      },
+    ],
+  },
+  {
+    id: "univ_man",
+    category: ["All", "Front-end", "Back-end"],
+    title: "University Management System",
+    icon: faUniversity,
+    description: ` A university management system written in mithril.js for a skill development university. It enabled user to add courses/ add students to course/comments/ render blog and many such functions.`,
+    techList: ["Mithril", "MySQL", "Tachyons", "AWS"],
+    completeTagList: ["Mithril", "MySQL", "Tachyons", "AWS", "GCP"],
+    link: [
+      {
+        text: "contact",
+        link: "",
+      },
+    ],
+  },
+  {
     id: "trading_app",
     category: ["All", "Front-end", "Back-end"],
     title: "Trading Application",
@@ -369,59 +426,6 @@ const WorkList: iWorkItem[] = [
     ],
   },
   {
-    id: "angular_httpshooter",
-    category: ["All", "Open Source", "Front-end"],
-    title: "Angular-httpshooter",
-    icon: faAngular,
-    description: ` A factory written in angular 1.0+ which makes/shoots all http calls collectively asynchronously.Angular-httpshooter makes all your api calls asynchronous, idea behind it to make the connection between server and client single threaded, it means shooting only one call at a point of time and wait for the response from server to launch the next call.`,
-    techList: ["AngularJS", "Javascript"],
-    completeTagList: ["AngularJS", "Javascript"],
-    link: [
-      {
-        text: "npm",
-        link: "https://www.npmjs.com/package/angular-httpshooter",
-      },
-      {
-        text: "github",
-        link: "https://www.npmjs.com/package/angular-httpshooter",
-      },
-    ],
-  },
-  {
-    id: "css_media_all",
-    category: ["All", "Open Source", "Front-end"],
-    title: "CSS MEDIA ALL",
-    icon: faCss3Alt,
-    description: ` A library written in css consisted of media queries to support the responsiveness of webpage. CMA(Css Media All) makes your webpage responsive, idea behind this library is to make webpage more responsive to differrent screens.`,
-    techList: ["CSS", "Sass"],
-    completeTagList: ["CSS", "Sass"],
-    link: [
-      {
-        text: "npm",
-        link: "https://www.npmjs.com/package/css-media-all",
-      },
-      {
-        text: "github",
-        link: "https://github.com/siddarthvader/CSS-MEDIA-ALL",
-      },
-    ],
-  },
-  {
-    id: "fee_management",
-    category: ["All", "Front-end", "Back-end"],
-    title: "Fee Management System",
-    icon: faPhp,
-    description: ` A fees management system for schools and college, written in PHP. You can create Class, Batch, Students, Teacher profile and manage the fee management for whole school, transfer of students to other class and other things.`,
-    techList: ["PHP", "CSS", "HTML", "Javascript"],
-    completeTagList: ["PHP", "CSS", "HTML", "Javascript"],
-    link: [
-      {
-        text: "github",
-        link: "https://github.com/siddarthvader/sms/tree/master",
-      },
-    ],
-  },
-  {
     id: "empman",
     category: ["All", "Front-end", "Back-end"],
     title: "Employees Management Portal",
@@ -451,18 +455,19 @@ const WorkList: iWorkItem[] = [
       },
     ],
   },
+
   {
-    id: "univ_man",
+    id: "fee_management",
     category: ["All", "Front-end", "Back-end"],
-    title: "University Management System",
-    icon: faUniversity,
-    description: ` A university management system written in mithril.js for a skill development university. It enabled user to add courses/ add students to course/comments/ render blog and many such functions.`,
-    techList: ["Mithril", "MySQL", "Tachyons", "AWS"],
-    completeTagList: ["Mithril", "MySQL", "Tachyons", "AWS", "GCP"],
+    title: "Fee Management System",
+    icon: faPhp,
+    description: ` A fees management system for schools and college, written in PHP. You can create Class, Batch, Students, Teacher profile and manage the fee management for whole school, transfer of students to other class and other things.`,
+    techList: ["PHP", "CSS", "HTML", "Javascript"],
+    completeTagList: ["PHP", "CSS", "HTML", "Javascript"],
     link: [
       {
-        text: "contact",
-        link: "",
+        text: "github",
+        link: "https://github.com/siddarthvader/sms/tree/master",
       },
     ],
   },
