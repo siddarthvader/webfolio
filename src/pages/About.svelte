@@ -53,6 +53,7 @@
           </div>
         </div>
         <a
+          rel="noreferrer"
           target="_blank"
           href="https://www.dropbox.com/s/zqfimh2q624txzw/CV.pdf?dl=0"
           download="Siddharth_Resume.pdf"
