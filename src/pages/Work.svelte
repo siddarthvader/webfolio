@@ -28,13 +28,17 @@
   }
 </script>
 
-<div class="p-6 h-[calc(100%-48px)] w-full bg-veryPaleRed">
-  <div class="p-4 text-4xl  z-10 page-title font-semibold">Work</div>
+<div
+  class="xl:p-4 p-4 h-full xl:h-[calc(100%-48px)] w-full bg-veryPaleRed flex flex-col"
+>
+  <div class="xl:p-4 p-2 xl:text-4xl text-2xl z-10 page-title font-semibold">
+    Work
+  </div>
   <div />
-  <div class="flex flex-row space-x-4 p-6">
+  <div class="flex flex-row xl:p-4 p-2 flex-wrap">
     {#each WorkCategory as cat}
       <button
-        class="font-semibold text-xl cursor-pointer hover:text-brightRed {selectedCategory ==
+        class="mr-4 font-semibold text-sm xl:text-xl cursor-pointer hover:text-brightRed {selectedCategory ==
         cat
           ? 'text-brightRed'
           : 'text-zinc-600'}"
@@ -44,7 +48,7 @@
       </button>
     {/each}
   </div>
-  <div class="flex flex-row flex-wrap p-4 h-[600px] overflow-y-scroll">
+  <div class="flex flex-row flex-wrap p-4 h-full xl:h-full overflow-y-scroll">
     {#each WorkList.filter( (w) => w.category.includes(selectedCategory) ) as work (work.id)}
       <div
         in:receive={{ key: work.id }}

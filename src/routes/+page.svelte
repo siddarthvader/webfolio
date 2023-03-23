@@ -11,7 +11,9 @@
   }
 </script>
 
-<div class="w-full xl:h-[calc(100vh-40px)] h-full]">
+<Header activeTab={state.activeTab} on:change={tabChange} />
+
+<div class="w-full h-[calc(100vh-40px)] h-full]">
   {#each PAGES as { name, component }, i}
     {#if state.activeTab == name}
       <svelte:component this={component} />
@@ -21,7 +23,6 @@
     <SubMenu />
   {/if}
 </div>
-<Header activeTab={state.activeTab} on:change={tabChange} />
 
 <style lang="scss" global>
   .page-title {

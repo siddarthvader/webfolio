@@ -30,12 +30,14 @@
   ];
 </script>
 
-<div class="xl:p-6 p-2 h-full xl:h-[calc(100%-48px)] w-full bg-veryPaleRed">
-  <div class="p-2 xl:p-4 text-3xl xl:text-4xl z-10 page-title font-semibold">
+<div
+  class="xl:p-4 p-4  xl:h-[calc(100%-48px)] h-full w-full bg-veryPaleRed flex flex-col"
+>
+  <div class="p-2 xl:p-4 text-2xl xl:text-4xl z-10 page-title font-semibold">
     About Me
   </div>
   <div class="flex lg:flex-row flex-col overflow-scroll h-full">
-    <div class="xl:p-6 p-2 flex lg:flex-row flex-col lg:w-[60%] w-[100%]">
+    <div class="xl:p-4 p-2 flex lg:flex-row flex-col lg:w-[60%] w-[100%]">
       <div class="xl:w-[93%] w-full">
         <div class="p-2 text-zinc-700">
           <div class="text-xl lg:text-2xl font-semibold  text-brightRed">
@@ -60,13 +62,13 @@
           class="bg-brightRed rounded-full px-4 py-1 text-white hover:bg-white hover:text-brightRed border-2 border-brightRed transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90 duration-300"
           >Download CV</a
         >
-        <hr class="my-12 h-0.5 border-t-0 bg-zinc-400" />
+        <hr class="my-6 h-0.5 border-t-0 bg-zinc-400" />
         <Interests />
       </div>
     </div>
-    <hr class="px-2 my-12 h-0.5 border-t-0 bg-zinc-400 block xl:hidden" />
+    <hr class="my-6 h-0.5 border-t-0 bg-zinc-400 xl:hidden" />
     <div
-      class="p-2 xl:p-4 lg:w-[40%] w-[100%] lg:overflow-y-scroll lg:max-h-[100%] lg:h-[600px]"
+      class="p-2 xl:p-4 lg:w-[40%] w-[100%] lg:overflow-y-scroll lg:max-h-[100%] lg:h-full"
     >
       <Timeline />
     </div>

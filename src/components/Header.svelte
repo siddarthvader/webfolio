@@ -1,21 +1,31 @@
 <script lang="ts">
-  import Fa from "svelte-fa";
   import { createEventDispatcher } from "svelte";
-  import { faBars, faHamburger } from "@fortawesome/free-solid-svg-icons";
   import { PAGES } from "../data/constants";
+  import MobileMenu from "./MobileMenu.svelte";
 
   export let activeTab: string;
+  let mobileOpen: boolean = false;
 
   const dispatch = createEventDispatcher();
 
   function changeState(activeTab: string): void {
-    console.log("activeTab is...", activeTab);
     dispatch("change", { activeTab });
+  }
+
+  function openMenu(ev: CustomEvent) {
+    console.log("ev.detaul.open", ev.detail.open);
+    mobileOpen = ev.detail.open;
+  }
+
+  function changeTab(ev: CustomEvent) {
+    changeState(ev.detail.activeTab);
   }
 </script>
 
-<div class="flex items-center justify-between  border-b-2  px-6 z-20">
-  <div class="space-x-6 flex flex-1 justify-end px-4 py-2">
+<div
+  class="flex items-center justify-end xl:justify-between  border-b-2  px-6 z-20"
+>
+  <div class="space-x-6 hidden xl:flex flex-1 justify-end px-4 py-2">
     {#each PAGES as page}
       <button
         class={`cursor-pointer hover:text-brightRed ${
@@ -28,26 +38,10 @@
     {/each}
   </div>
 
-  <div class="md:hidden">
-    <Fa icon={faBars} />
-  </div>
-
-  <div class="xl:hidden">
-    <div
-      id="menu"
-      class=" absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
-    >
-      <div class=" cursor-pointer hover:text-brightRed text-zinc-900">
-        About
-      </div>
-      <div class="cursor-pointer hover:text-brightRed text-zinc-900">Work</div>
-      <div class="cursor-pointer hover:text-brightRed text-zinc-900">
-        Open Source
-      </div>
-      <div class="cursor-pointer hover:text-brightRed text-zinc-900">Music</div>
-      <div class="cursor-pointer hover:text-brightRed text-zinc-900">
-        Stories
-      </div>
-    </div>
-  </div>
+  <MobileMenu
+    {activeTab}
+    on:toggle={openMenu}
+    on:change={changeTab}
+    open={mobileOpen}
+  />
 </div>
