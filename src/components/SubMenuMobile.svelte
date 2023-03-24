@@ -5,9 +5,9 @@
 </script>
 
 <div
-  class="w-full bg-gradient-to-r to-red-500 from-brightRed flex  flex-col items-center justify-around p-2"
+  class="w-full h-[20%] bg-gradient-to-r to-red-500 from-brightRed flex flex-col items-center p-2"
 >
-  <div class="flex flex-row w-full justify-around">
+  <div class="flex flex-row w-full justify-start flex-wrap">
     {#each SubMenuList as smenu}
       <a
         class="pl-4 cursor-pointer text-xl"
@@ -15,7 +15,7 @@
         target="_blank"
         rel="noreferrer"
       >
-        <Fa icon={smenu.icon} size="1x" class="text-white" />
+        <Fa icon={smenu.icon} size="1.2x" class="text-white" />
       </a>
     {/each}
   </div>

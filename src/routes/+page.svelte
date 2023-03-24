@@ -13,7 +13,7 @@
 
 <Header activeTab={state.activeTab} on:change={tabChange} />
 
-<div class="w-full h-[calc(100vh-40px)] h-full]">
+<div class="w-full xl:h-[calc(100vh-40px)] h-full pb-12 xl:pb-4">
   {#each PAGES as { name, component }, i}
     {#if state.activeTab == name}
       <svelte:component this={component} />

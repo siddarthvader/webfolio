@@ -16,6 +16,9 @@
   function changeState(activeTab: string): void {
     dispatch("change", { activeTab });
   }
+  function handleClickOutside(e: CustomEvent) {
+    dispatch("toggle", { open: false });
+  }
 </script>
 
 <button
@@ -48,21 +51,31 @@
 </button>
 
 {#if open}
-  <div
-    class="w-[80%] h-[calc(100%-42px)] absolute right-0 top-[40px] bottom-0 bg-white z-[100] flex-col flex"
+  <button
+    on:click={(e) => handleClickOutside(e)}
+    class="w-full h-[calc(100%-42px)] absolute right-0 top-[40px] bottom-0 bg-zinc-400 bg-opacity-70 z-[100] flex justify-end"
   >
-    <div class="flex w-full flex-col space-y-4 h-full overflow-scroll py-6">
-      {#each PAGES as page}
-        <button
-          class={`text-xl font-semibold cursor-pointer hover:text-brightRed ${
-            activeTab === page.name ? "text-brightRed" : " text-zinc-600"
-          }`}
-          on:click={() => changeState(page.name)}
-        >
-          {page.label}
-        </button>
-      {/each}
+    <div class="w-[60%] h-full flex-col flex bg-veryPaleRed">
+      <div
+        class="h-[20%] w-full text-xl text-zinc-600 font-bold items-end flex justify-center"
+      >
+        Siddharth's Portfolio
+      </div>
+      <div
+        class="flex w-full h-[60%] flex-col space-y-4 overflow-scroll py-6 justify-center"
+      >
+        {#each PAGES as page}
+          <button
+            class={`text-xl font-semibold cursor-pointer hover:text-brightRed ${
+              activeTab === page.name ? "text-brightRed" : " text-zinc-600"
+            }`}
+            on:click={() => changeState(page.name)}
+          >
+            {page.label}
+          </button>
+        {/each}
+      </div>
+      <SubMenuMobile />
     </div>
-    <SubMenuMobile />
-  </div>
+  </button>
 {/if}
