@@ -29,7 +29,7 @@
 </script>
 
 <div
-  class="xl:p-4 p-4 h-full xl:h-[calc(100%-48px)] w-full bg-veryPaleRed flex flex-col"
+  class="xl:p-4 p-2 h-full xl:h-[calc(100%-48px)] w-full bg-veryPaleRed flex flex-col"
 >
   <div class="xl:p-4 p-2 xl:text-4xl text-2xl z-10 page-title font-semibold">
     Work

@@ -56,13 +56,13 @@
     class="w-full h-[calc(100%-42px)] absolute right-0 top-[40px] bottom-0 bg-zinc-400 bg-opacity-70 z-[100] flex justify-end"
   >
     <div class="w-[60%] h-full flex-col flex bg-veryPaleRed">
-      <div
+      <!-- <div
         class="h-[20%] w-full text-xl text-zinc-600 font-bold items-end flex justify-center"
       >
         Siddharth's Portfolio
-      </div>
+      </div> -->
       <div
-        class="flex w-full h-[60%] flex-col space-y-4 overflow-scroll py-6 justify-center"
+        class="flex w-full h-[80%] flex-col space-y-4 overflow-scroll py-6 justify-end"
       >
         {#each PAGES as page}
           <button

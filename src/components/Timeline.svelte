@@ -19,11 +19,11 @@
         <p class="mt-3">
           {item.description}
         </p>
-        <div class="flex flex-row">
+        <div class="flex xl:flex-row flex-col items-start">
           {#if item?.link?.length > 0}
             {#each item.link as link}
               <a
-                href={link?.link}
+                href={link.link}
                 target="_blank"
                 rel="noreferrer"
                 class="flex flex-row items-center px-1 mt-1 bg-white  rounded-sm  text-brightRed  text-xs border-white border mr-2 "

@@ -1,9 +1,11 @@
-<div class="xl:p-4 p-4 h-[calc(100%-48px)] w-full bg-veryPaleRed flex flex-col">
+<div
+  class="xl:p-4 p-4 h-full xl:h-[calc(100%-48px)] w-full bg-veryPaleRed flex flex-col"
+>
   <div class="xl:p-4 p-2 text-2xl xl:text-4xl  z-10 page-title font-semibold">
     Music
   </div>
   <div
-    class="w-full m-auto space-y-8 max-h-full xl:max-h-full overflow-y-scroll"
+    class="w-full p-4 m-auto space-y-8 max-h-full xl:max-h-full overflow-y-scroll"
   >
     <iframe
       class="m-auto"

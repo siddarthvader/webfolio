@@ -2,7 +2,6 @@ import {
   faAngular,
   faCss3Alt,
   faGithub,
-  faMicroblog,
   faNpm,
   faPhp,
   faReact,
@@ -16,12 +15,14 @@ import {
   faBlog,
   faBook,
   faBowlFood,
+  faBriefcase,
   faChartLine,
   faFootball,
   faGamepad,
   faGlobe,
   faMusic,
   faRunning,
+  faShareSquare,
   faTruck,
   faUniversity,
 } from "@fortawesome/free-solid-svg-icons";
@@ -87,7 +88,7 @@ type iTimeLine = {
   title: string;
   time: string;
   description: string;
-  link?: TimeLinkLink[];
+  link: TimeLinkLink[];
 };
 
 const TimeLine: iTimeLine[] = [
@@ -95,7 +96,7 @@ const TimeLine: iTimeLine[] = [
     title: "Freelancer",
     time: "March 2017 - Now",
     description:
-      "I have written fair amount of SaaS, Single Page applications using various frameworks, concurretnly maintaing the quality of code and keeping it clean, as much as the situation allowed.",
+      "Wrote ample amount of SaaS, Single Page applications using various frameworks, concurretnly maintaing the quality of code and keeping it clean, readable, as much as the context permitted.",
 
     link: [
       {
@@ -108,7 +109,7 @@ const TimeLine: iTimeLine[] = [
     title: "Front-end Consultant",
     time: "April 2020 - Feb 2023",
     description:
-      "I worked on a Business Intelligence software and worked with a very smart team to bring data to visualization. We wrote a lot of Mithril and React, got to work on really interesting problems for e.g. writing sql token editors and web maps.",
+      "Worked on a Business Intelligence software and worked with a very smart team to bring data to visualization. We wrote a lot of Mithril and React, got to work on really interesting problems for e.g. writing sql token editors and web maps.",
 
     link: [
       {
@@ -120,7 +121,7 @@ const TimeLine: iTimeLine[] = [
   {
     title: "Front-end Lead",
     time: "March 2018 - July 2019",
-    description: `I was part of a startup(quikmile) where we create a system to minimize the inefficiencies in the transportation and logistics sector in the country. With the help of cutting-edge technology our team of tech experts intent to help fleet owners bridge the gaps and get the best ROI from their fleet and in turn grow their business.`,
+    description: `Was part of a startup(quikmile) where we created a system to minimize the inefficiencies in the transportation and logistics sector in the country. With the help of cutting-edge technology. Our team of tech experts intent to help fleet owners bridge the gaps and get the best ROI from their fleet and in-turn grow their business.`,
     link: [
       {
         text: "Company Profile",
@@ -136,7 +137,7 @@ const TimeLine: iTimeLine[] = [
     title: "Lead Developer",
     time: "Jan 2016 - March 2017",
     description:
-      "I worked on a Learning Management System in a startup named Acadaly, where I wrote admin panel for a system helping University teachers/students.",
+      "Contributed to Developement a Learning Management System for a  startup named Acadaly, wrote admin panel for a system helping University teachers/students.",
     link: [
       {
         text: "Company Profile",
@@ -146,18 +147,18 @@ const TimeLine: iTimeLine[] = [
   },
   {
     title: "Junior Developer",
-    time: "Jan 2014 - Dec 2016",
+    time: "July 2014 - Dec 2015",
     description:
-      "I was a junior developer for a FinTech company called Nucleus Software, I was mostly writing jquery day-in day out, It was fun while it lasted.",
+      "Was a junior developer for a FinTech company called Nucleus Software, Was mostly writing jquery day-in day out, It was fun while it lasted.",
     link: [
-      { text: "Compant Profile", link: "https://www.nucleussoftware.com/" },
+      { text: "Company Profile", link: "https://www.nucleussoftware.com/" },
     ],
   },
   {
     title: "College Guy",
     time: "July 2010- July 2014",
     description:
-      "I went to  MNIT Jaipur for undergraduate and I started writing code in College and I listened to a lot of Rock music and I managed crowd and teams.",
+      "I went to National Institute of Technology, Jaipur for undergraduate degree. Started writing code in College and listened to a lot of Rock music and managed crowd and teams.",
     link: [
       {
         text: "College",
@@ -169,7 +170,8 @@ const TimeLine: iTimeLine[] = [
     title: "Random Person ",
     time: "Jan 1993- July 2010",
     description:
-      "I was a very random person, interested in a lot of things and ended up joining Engineering college.",
+      "Was a very random person, interested in a lot of things and ended up joining Engineering college.",
+    link: [],
   },
 ];
 
@@ -178,6 +180,7 @@ type iInterest = {
   name: string;
   size: string;
 };
+
 const InterestList: iInterest[] = [
   {
     icon: faGlobe,
@@ -269,6 +272,11 @@ const InterestList: iInterest[] = [
     name: "Mixing Music",
     size: "2xl",
   },
+  {
+    icon: faGlobe,
+    name: "Fantasy Fiction",
+    size: "xl",
+  },
 ];
 
 export type WorkCategoryOption =
@@ -314,7 +322,10 @@ type TechItem =
   | "MySQL"
   | "Tachyons"
   | "AWS"
-  | "GCP";
+  | "GCP"
+  | "Tailwind"
+  | "Svelte"
+  | "Typescript";
 
 type iWorkItem = {
   id: string;
@@ -327,6 +338,25 @@ type iWorkItem = {
   link: Record<string, string>[];
 };
 const WorkList: iWorkItem[] = [
+  {
+    id: "webfolio_new",
+    category: ["All", "Front-end"],
+    title: "Web Portfolio (Self)",
+    icon: faBriefcase,
+    description: ` A web portofolio written for self, using Svelte, Typescript and Tailwind. This is a single page application.`,
+    techList: ["Svelte", "Typescript", "Tailwind"],
+    completeTagList: ["Svelte", "Typescript", "Tailwind"],
+    link: [
+      {
+        text: "github",
+        link: "https://github.com/siddarthvader/webfolio",
+      },
+      {
+        text: "web",
+        link: "https://www.siddharthjain.in/",
+      },
+    ],
+  },
   {
     id: "angular_httpshooter",
     category: ["All", "Open Source", "Front-end"],
@@ -366,21 +396,6 @@ const WorkList: iWorkItem[] = [
     ],
   },
   {
-    id: "univ_man",
-    category: ["All", "Front-end", "Back-end"],
-    title: "University Management System",
-    icon: faUniversity,
-    description: ` A university management system written in mithril.js for a skill development university. It enabled user to add courses/ add students to course/comments/ render blog and many such functions.`,
-    techList: ["Mithril", "MySQL", "Tachyons", "AWS"],
-    completeTagList: ["Mithril", "MySQL", "Tachyons", "AWS", "GCP"],
-    link: [
-      {
-        text: "contact",
-        link: "",
-      },
-    ],
-  },
-  {
     id: "trading_app",
     category: ["All", "Front-end", "Back-end"],
     title: "Trading Application",
@@ -410,6 +425,22 @@ const WorkList: iWorkItem[] = [
       },
     ],
   },
+  {
+    id: "univ_man",
+    category: ["All", "Front-end", "Back-end"],
+    title: "University Management System",
+    icon: faUniversity,
+    description: ` A university management system written in mithril.js for a skill development university. It enabled user to add courses/ add students to course/comments/ render blog and many such functions.`,
+    techList: ["Mithril", "MySQL", "Tachyons", "AWS"],
+    completeTagList: ["Mithril", "MySQL", "Tachyons", "AWS", "GCP"],
+    link: [
+      {
+        text: "contact",
+        link: "",
+      },
+    ],
+  },
+
   {
     id: "ball_game",
     category: ["All", "Front-end", "Game"],
