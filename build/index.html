@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+    <link rel="icon" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="content-security-policy" content="">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.104b5d51.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.7e1e6c09.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.c2d0faf7.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.151026b5.js">
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body data-sveltekit-preload-data="hover" class="font-sans">
+    <div style="display: contents">
+			<script>
+				{
+					__sveltekit_1djzpjx = {
+						env: {},
+						base: new URL(".", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					Promise.all([
+						import("./_app/immutable/entry/start.104b5d51.js"),
+						import("./_app/immutable/entry/app.151026b5.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_1djzpjx.element);
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
