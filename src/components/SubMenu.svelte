@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="h-[48px] w-full bg-gradient-to-r to-red-500 from-brightRed xl:flex hidden items-center justify-between px-6"
+  class="h-[48px] w-full bg-gradient-to-r to-red-500 from-brightRed xl:flex hidden items-center justify-between px-6 z-50"
 >
   <div class="flex">
     {#each SubMenuList as smenu}

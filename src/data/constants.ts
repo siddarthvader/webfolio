@@ -287,11 +287,11 @@ export type WorkCategoryOption =
   | "Open Source";
 
 const WorkCategory: WorkCategoryOption[] = [
-  "All",
   "Front-end",
   "Back-end",
   "Game",
   "Open Source",
+  "All",
 ];
 
 type TechItem =
