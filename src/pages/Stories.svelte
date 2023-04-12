@@ -22,3 +22,16 @@
     <div id="substack-feed-embed" />
   </div>
 </div>
+
+<style global lang="scss">
+  .substack-feed-widget {
+    background: none !important;
+  }
+  .substack-feed-widget > a {
+    margin-top: 16px;
+    background: white !important;
+    border-radius: 4px;
+    border: solid 1px white;
+    padding: 8px;
+  }
+</style>
