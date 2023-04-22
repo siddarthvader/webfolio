@@ -21,7 +21,7 @@
     },
   });
 
-  let selectedCategory: WorkCategoryOption = "Front-end";
+  let selectedCategory: WorkCategoryOption = "All";
 
   function changeCat(newCat: WorkCategoryOption) {
     selectedCategory = newCat;
@@ -56,7 +56,7 @@
         in:receive={{ key: work.id }}
         out:send|local={{ key: work.id }}
         animate:flip={{ duration: 600, easing: quintOut }}
-        class=" bg-white rounded-lg hover:shadow-xl text-zinc-600 w-[90%] xl:w-[60%] h-auto max-h-[320px] xl:h-[240px] mx-auto  cursor-pointer relative group m-4 work-box overflow-hidden"
+        class=" bg-white rounded-lg hover:shadow-xl text-zinc-600 w-[90%] xl:w-[60%] h-auto max-h-[320px] xl:h-[240px] mx-auto cursor-pointer relative group m-4 work-box overflow-hidden"
       >
         <div class="flex flex-col justify-between h-full w-full">
           <div class="flex items-center justify-between xl:flex-row flex-col">
@@ -73,7 +73,7 @@
                   href={tech.link}
                   target="_blank"
                   rel="noreferrer"
-                  class="flex flex-row items-center px-1 mt-1 bg-white  rounded-sm  text-brightRed  text-xs border-white border mr-2 "
+                  class="flex flex-row items-center px-1 mt-1 bg-white rounded-sm text-brightRed text-xs border-white border mr-2"
                 >
                   <span class="mr-1"> {tech.text}</span>
                   <Fa icon={faLink} size="sm" />
@@ -97,10 +97,10 @@
               </div>
             </div>
 
-            <div class="flex flex-row flex-wrap self-end  p-2">
+            <div class="flex flex-row flex-wrap self-end p-2">
               {#each work.techList as tech}
                 <div
-                  class="px-1 mt-1 bg-brightRed shadow-md no-underline rounded-sm bg-blue text-white  text-xs border-brightRed border mr-2 "
+                  class="px-1 mt-1 bg-brightRed shadow-md no-underline rounded-sm bg-blue text-white text-xs border-brightRed border mr-2"
                 >
                   {tech}
                 </div>
@@ -112,7 +112,7 @@
                   href={tech.link}
                   target="_blank"
                   rel="noreferrer"
-                  class="flex flex-row items-center px-1 mt-1 bg-white  rounded-sm  text-brightRed  text-xs border-white border mr-2 "
+                  class="flex flex-row items-center px-1 mt-1 bg-white rounded-sm text-brightRed text-xs border-white border mr-2"
                 >
                   <span class="mr-1"> {tech.text}</span>
                   <Fa icon={faLink} size="sm" />

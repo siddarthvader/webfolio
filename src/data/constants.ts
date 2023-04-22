@@ -287,11 +287,11 @@ export type WorkCategoryOption =
   | "Open Source";
 
 const WorkCategory: WorkCategoryOption[] = [
+  "All",
   "Front-end",
   "Back-end",
   "Game",
   "Open Source",
-  "All",
 ];
 
 type TechItem =
@@ -325,7 +325,8 @@ type TechItem =
   | "GCP"
   | "Tailwind"
   | "Svelte"
-  | "Typescript";
+  | "Typescript"
+  | "Prisma";
 
 type iWorkItem = {
   id: string;
@@ -338,6 +339,45 @@ type iWorkItem = {
   link: Record<string, string>[];
 };
 const WorkList: iWorkItem[] = [
+  {
+    id: "pasteviz",
+    category: ["All", "Front-end"],
+    title: "PasteViz, Viz on Fly",
+    icon: faBriefcase,
+    description: ` PasteViz is a webapp written in svelte which allows user to generate and embed analytics/visualizations on the fly. It is a single page application.`,
+    techList: ["Svelte", "Typescript", "Tailwind"],
+    completeTagList: ["Svelte", "Typescript", "Tailwind"],
+    link: [
+      {
+        text: "github",
+        link: "https://github.com/siddarthvader/pasteviz",
+      },
+      {
+        text: "web",
+        link: "https://pasteviz.vercel.app/",
+      },
+    ],
+  },
+  {
+    id: "geocoding",
+    category: ["All", "Back-end"],
+    title: "Batch GeoCoding",
+    icon: faBriefcase,
+    description:
+      " BatchGeoding is an API written in Express.js which allows user to geocode a list of addresses in a single request. It uses Prisma ORM and Mysql as database",
+    techList: ["Express.js", "Typescript", "Prisma", "MySQL"],
+    completeTagList: ["Express.js", "Typescript", "Prisma", "MySQL"],
+    link: [
+      {
+        text: "github",
+        link: "https://github.com/siddarthvader/geocoding-api",
+      },
+      {
+        text: "documentation",
+        link: "https://geocoding-api.vercel.app/",
+      },
+    ],
+  },
   {
     id: "webfolio_new",
     category: ["All", "Front-end"],
