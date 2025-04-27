@@ -32,6 +32,7 @@ import Home from "../pages/Home.svelte";
 import Music from "../pages/Music.svelte";
 import Stories from "../pages/Stories.svelte";
 import Work from "../pages/Work.svelte";
+import Blog from "../pages/Blog.svelte";
 
 import { faPenNib } from "@fortawesome/free-solid-svg-icons";
 
@@ -45,6 +46,7 @@ const PAGES: iPage[] = [
   { name: "about", label: "About", component: About },
   { name: "work", label: "Work", component: Work },
   { name: "stories", label: "Stories", component: Stories },
+  { name: "blog", label: "Blog", component: Blog },
   // { name: "open_source", label: "Open Source", component: Opensource },
   { name: "music", label: "Music", component: Music },
 ];
@@ -55,6 +57,11 @@ type iSubMenu = {
   link: string;
 };
 const SubMenuList: iSubMenu[] = [
+  {
+    name: "Utility Gods",
+    icon: faBriefcase,
+    link: "https://utilitygods.com",
+  },
   {
     name: "Github",
     icon: faGithub,
@@ -92,6 +99,18 @@ type iTimeLine = {
 };
 
 const TimeLine: iTimeLine[] = [
+  {
+    title: "Founder & CEO",
+    time: "Feb 2023 - Now",
+    description:
+      "Founded Utility Gods, a boutique software agency focused on open-source innovation and technical excellence. Leading development of multiple products including DocuGods, Photoship, OrangeGas, and open-source templates for modern web development.",
+    link: [
+      {
+        text: "Utility Gods",
+        link: "https://utilitygods.com",
+      },
+    ],
+  },
   {
     title: "Freelancer",
     time: "March 2017 - Now",
@@ -184,8 +203,23 @@ type iInterest = {
 const InterestList: iInterest[] = [
   {
     icon: faGlobe,
-    name: "CSS",
+    name: "Go",
     size: "4xl",
+  },
+  {
+    icon: faGlobe,
+    name: "Python",
+    size: "3xl",
+  },
+  {
+    icon: faGlobe,
+    name: "HTMX",
+    size: "2xl",
+  },
+  {
+    icon: faGlobe,
+    name: "CSS",
+    size: "3xl",
   },
   {
     icon: faGlobe,
@@ -284,7 +318,8 @@ export type WorkCategoryOption =
   | "Front-end"
   | "Back-end"
   | "Game"
-  | "Open Source";
+  | "Open Source"
+  | "Blog";
 
 const WorkCategory: WorkCategoryOption[] = [
   "All",
@@ -292,6 +327,7 @@ const WorkCategory: WorkCategoryOption[] = [
   "Back-end",
   "Game",
   "Open Source",
+  "Blog",
 ];
 
 type TechItem =
@@ -326,7 +362,11 @@ type TechItem =
   | "Tailwind"
   | "Svelte"
   | "Typescript"
-  | "Prisma";
+  | "Prisma"
+  | "Go"
+  | "Python"
+  | "HTMX"
+  | "FastAPI";
 
 type iWorkItem = {
   id: string;
@@ -339,6 +379,25 @@ type iWorkItem = {
   link: Record<string, string>[];
 };
 const WorkList: iWorkItem[] = [
+  {
+    id: "utilitygods",
+    category: ["All", "Front-end", "Back-end"],
+    title: "Utility Gods",
+    icon: faBriefcase,
+    description: `Founded Utility Gods, a boutique software agency that transforms ideas into impactful solutions, powered by open-source innovation and technical excellence. Developed multiple core products including DocuGods, Photoship, OrangeGas, and open-source templates for Go HTMX and FastAPI.`,
+    techList: ["Go", "Python", "Typescript", "HTMX", "FastAPI", "Svelte"],
+    completeTagList: ["Go", "Python", "Typescript", "HTMX", "FastAPI", "Svelte", "Tailwind", "React"],
+    link: [
+      {
+        text: "website",
+        link: "https://utilitygods.com",
+      },
+      {
+        text: "github",
+        link: "https://github.com/utilitygods",
+      },
+    ],
+  },
   {
     id: "pasteviz",
     category: ["All", "Front-end"],
